@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Serif_KR, Albert_Sans } from "next/font/google";
 
 import "./globals.css";
+import Header from "@/components/Header";
 
 const albert = Albert_Sans({ subsets: ["latin"], variable: "--font-albert" });
 const notoKr = Noto_Serif_KR({
@@ -46,10 +47,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${albert.variable} ${notoKr.variable}`}>
         <div className="flex fixed inset-0 bg-blue-200 ">
-          <div className="flex w-full h-full bg-gray-200 max-w-7xl mx-auto"></div>
+          <Header />
+          <div className="flex w-full h-full bg-gray-200 max-w-screen-2xl mx-auto "></div>
         </div>
         <div className="flex fixed inset-0 ">
-          <div className="flex w-full h-full max-w-7xl mx-auto text-black">
+          <div className="flex w-full h-full max-w-screen-2xl mx-auto text-black">
             {children}
           </div>
         </div>
