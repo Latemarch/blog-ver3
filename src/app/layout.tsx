@@ -46,12 +46,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${albert.variable} ${notoKr.variable}`}>
-        <div className="flex fixed inset-0 bg-blue-200 ">
-          <Header />
-          <div className="flex w-full h-full bg-gray-200 max-w-screen-2xl mx-auto "></div>
+        <div className="flex fixed inset-0 bg-blue-200 text-black">
+          <div className="flex w-full h-full max-w-screen-2xl mx-auto "></div>
         </div>
-        <div className="flex fixed inset-0 ">
-          <div className="flex w-full h-full max-w-screen-2xl mx-auto text-black">
+        <div className="flex flex-col w-full relative inset-0 items-center text-black">
+          <Header />
+          <div className="flex relative w-full max-w-screen-2xl p-10 pt-96 z-0">
             {children}
           </div>
         </div>
