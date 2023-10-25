@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 export default function HeaderBG() {
-  const [opacity, setOpacity] = useState(1);
+  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setOpacity(window.scrollY === 0 ? 1 : 0);
+      setOpacity(window.scrollY === 0 ? 0 : 1);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -16,14 +16,14 @@ export default function HeaderBG() {
   }, []);
 
   return (
-    <div className="flex fixed w-full h-20">
-      <div
-        className="flex w-full  mx-auto bg-gray-400 opacity-40"
-        style={{
-          opacity,
-          transition: "opacity 0.5s",
-        }}
-      />
+    <div
+      className="flex fixed h-20 z-10 w-full items-center drop-shadow-lg justify-center mx-auto bg-gray-400"
+      style={{
+        opacity,
+        transition: "opacity 0.3s",
+      }}
+    >
+      11
     </div>
   );
 }

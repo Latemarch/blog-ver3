@@ -49,12 +49,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${albert.variable} ${notoKr.variable}`}>
         <div className="flex fixed inset-0 bg-blue-200 text-black">
-          <HeaderBG />
           <div className="flex w-full h-full max-w-screen-2xl mx-auto "></div>
         </div>
         <div className="flex flex-col w-full relative inset-0 items-center text-black">
+          <HeaderBG />
           <Header />
-          <div className="flex relative w-full max-w-screen-2xl p-10 pt-24 z-0">
+          <div className="flex relative w-full max-w-screen-2xl p-10 pt-24">
             {children}
           </div>
           <Footer />
